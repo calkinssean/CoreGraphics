@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14C290201DF88BE300D0FCAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */; };
+		14C290221DF88BE300D0FCAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290211DF88BE300D0FCAA /* ViewController.swift */; };
+		14C290251DF88BE300D0FCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C290231DF88BE300D0FCAA /* Main.storyboard */; };
+		14C290281DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14C290261DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld */; };
+		14C2902A1DF88BE400D0FCAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C290291DF88BE400D0FCAA /* Assets.xcassets */; };
+		14C2902D1DF88BE400D0FCAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C2902B1DF88BE400D0FCAA /* LaunchScreen.storyboard */; };
+		14C290351DF8A65D00D0FCAA /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290341DF8A65D00D0FCAA /* PushButtonView.swift */; };
+		14C290371DF8AE1D00D0FCAA /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290361DF8AE1D00D0FCAA /* CounterView.swift */; };
+		14C290391DF8B95000D0FCAA /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290381DF8B95000D0FCAA /* GraphView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14C2901C1DF88BE300D0FCAA /* SimpleGaugeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGaugeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14C290211DF88BE300D0FCAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14C290241DF88BE300D0FCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14C290271DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleGaugeApp.xcdatamodel; sourceTree = "<group>"; };
+		14C290291DF88BE400D0FCAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14C2902C1DF88BE400D0FCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14C2902E1DF88BE400D0FCAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14C290341DF8A65D00D0FCAA /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
+		14C290361DF8AE1D00D0FCAA /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		14C290381DF8B95000D0FCAA /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14C290191DF88BE300D0FCAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14C290131DF88BE300D0FCAA = {
+			isa = PBXGroup;
+			children = (
+				14C2901E1DF88BE300D0FCAA /* SimpleGaugeApp */,
+				14C2901D1DF88BE300D0FCAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14C2901D1DF88BE300D0FCAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14C2901C1DF88BE300D0FCAA /* SimpleGaugeApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14C2901E1DF88BE300D0FCAA /* SimpleGaugeApp */ = {
+			isa = PBXGroup;
+			children = (
+				14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */,
+				14C290211DF88BE300D0FCAA /* ViewController.swift */,
+				14C290341DF8A65D00D0FCAA /* PushButtonView.swift */,
+				14C290361DF8AE1D00D0FCAA /* CounterView.swift */,
+				14C290381DF8B95000D0FCAA /* GraphView.swift */,
+				14C290231DF88BE300D0FCAA /* Main.storyboard */,
+				14C290291DF88BE400D0FCAA /* Assets.xcassets */,
+				14C2902B1DF88BE400D0FCAA /* LaunchScreen.storyboard */,
+				14C2902E1DF88BE400D0FCAA /* Info.plist */,
+				14C290261DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld */,
+			);
+			path = SimpleGaugeApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14C2901B1DF88BE300D0FCAA /* SimpleGaugeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14C290311DF88BE400D0FCAA /* Build configuration list for PBXNativeTarget "SimpleGaugeApp" */;
+			buildPhases = (
+				14C290181DF88BE300D0FCAA /* Sources */,
+				14C290191DF88BE300D0FCAA /* Frameworks */,
+				14C2901A1DF88BE300D0FCAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleGaugeApp;
+			productName = SimpleGaugeApp;
+			productReference = 14C2901C1DF88BE300D0FCAA /* SimpleGaugeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14C290141DF88BE300D0FCAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sean Calkins";
+				TargetAttributes = {
+					14C2901B1DF88BE300D0FCAA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 954HJ5Q475;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 14C290171DF88BE300D0FCAA /* Build configuration list for PBXProject "SimpleGaugeApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14C290131DF88BE300D0FCAA;
+			productRefGroup = 14C2901D1DF88BE300D0FCAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14C2901B1DF88BE300D0FCAA /* SimpleGaugeApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14C2901A1DF88BE300D0FCAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14C2902D1DF88BE400D0FCAA /* LaunchScreen.storyboard in Resources */,
+				14C2902A1DF88BE400D0FCAA /* Assets.xcassets in Resources */,
+				14C290251DF88BE300D0FCAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14C290181DF88BE300D0FCAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14C290221DF88BE300D0FCAA /* ViewController.swift in Sources */,
+				14C290201DF88BE300D0FCAA /* AppDelegate.swift in Sources */,
+				14C290351DF8A65D00D0FCAA /* PushButtonView.swift in Sources */,
+				14C290281DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld in Sources */,
+				14C290371DF8AE1D00D0FCAA /* CounterView.swift in Sources */,
+				14C290391DF8B95000D0FCAA /* GraphView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14C290231DF88BE300D0FCAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14C290241DF88BE300D0FCAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14C2902B1DF88BE400D0FCAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14C2902C1DF88BE400D0FCAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14C2902F1DF88BE400D0FCAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14C290301DF88BE400D0FCAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14C290321DF88BE400D0FCAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 954HJ5Q475;
+				INFOPLIST_FILE = SimpleGaugeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanCalkins.SimpleGaugeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14C290331DF88BE400D0FCAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 954HJ5Q475;
+				INFOPLIST_FILE = SimpleGaugeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SeanCalkins.SimpleGaugeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14C290171DF88BE300D0FCAA /* Build configuration list for PBXProject "SimpleGaugeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14C2902F1DF88BE400D0FCAA /* Debug */,
+				14C290301DF88BE400D0FCAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14C290311DF88BE400D0FCAA /* Build configuration list for PBXNativeTarget "SimpleGaugeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14C290321DF88BE400D0FCAA /* Debug */,
+				14C290331DF88BE400D0FCAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14C290261DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14C290271DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodel */,
+			);
+			currentVersion = 14C290271DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodel */;
+			path = SimpleGaugeApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 14C290141DF88BE300D0FCAA /* Project object */;
+}
