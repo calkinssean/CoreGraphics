@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142674C91DF9E38F00A23F2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142674C81DF9E38F00A23F2B /* BackgroundView.swift */; };
+		142674CB1DF9F69000A23F2B /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142674CA1DF9F68F00A23F2B /* MedalView.swift */; };
 		14C290201DF88BE300D0FCAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */; };
 		14C290221DF88BE300D0FCAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290211DF88BE300D0FCAA /* ViewController.swift */; };
 		14C290251DF88BE300D0FCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C290231DF88BE300D0FCAA /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142674C81DF9E38F00A23F2B /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		142674CA1DF9F68F00A23F2B /* MedalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 		14C2901C1DF88BE300D0FCAA /* SimpleGaugeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGaugeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C290211DF88BE300D0FCAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				14C290341DF8A65D00D0FCAA /* PushButtonView.swift */,
 				14C290361DF8AE1D00D0FCAA /* CounterView.swift */,
 				14C290381DF8B95000D0FCAA /* GraphView.swift */,
+				142674C81DF9E38F00A23F2B /* BackgroundView.swift */,
+				142674CA1DF9F68F00A23F2B /* MedalView.swift */,
 				14C290231DF88BE300D0FCAA /* Main.storyboard */,
 				14C290291DF88BE400D0FCAA /* Assets.xcassets */,
 				14C2902B1DF88BE400D0FCAA /* LaunchScreen.storyboard */,
@@ -149,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142674CB1DF9F69000A23F2B /* MedalView.swift in Sources */,
 				14C290221DF88BE300D0FCAA /* ViewController.swift in Sources */,
 				14C290201DF88BE300D0FCAA /* AppDelegate.swift in Sources */,
 				14C290351DF8A65D00D0FCAA /* PushButtonView.swift in Sources */,
+				142674C91DF9E38F00A23F2B /* BackgroundView.swift in Sources */,
 				14C290281DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld in Sources */,
 				14C290371DF8AE1D00D0FCAA /* CounterView.swift in Sources */,
 				14C290391DF8B95000D0FCAA /* GraphView.swift in Sources */,
@@ -316,6 +324,7 @@
 				14C290331DF88BE400D0FCAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

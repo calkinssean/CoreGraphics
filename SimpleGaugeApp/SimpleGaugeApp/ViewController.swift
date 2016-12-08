@@ -14,10 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var counterView: CounterView!
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var averageWaterDrunk: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var medalView: MedalView!
     
     var tap = UITapGestureRecognizer()
     
-    var isGraphViewShowing = true
+    var isGraphViewShowing = false
     var needleImageView = UIImageView()
     var speedometerCurrentValue: Float!
     var prevAngleFactor: Float!
@@ -36,7 +39,9 @@ class ViewController: UIViewController {
         self.counterLabel.text = String(counterView.counter)
        
         self.drawBezierPath()
+        self.setupGraphDisplay()
         
+        checkTotal()
          //addMeterViewContents()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -47,6 +52,51 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController {
+    
+    func setupGraphDisplay() {
+       
+        graphView.graphPoints[graphView.graphPoints.count - 1] = counterView.counter
+        graphView.setNeedsDisplay()
+        
+        maxLabel.text = "\(graphView.graphPoints.max()!)"
+        let average = graphView.graphPoints.reduce(0, +) /
+        graphView.graphPoints.count
+        averageWaterDrunk.text = "\(average)"
+    
+        let calendar = Calendar.current
+       
+        var weekDay = calendar.component(.weekday, from: Date())
+        
+        let days = ["S", "S", "M", "T", "W", "T", "F"]
+        
+        for i in (1...days.count).reversed() {
+          
+            if let labelView = graphView.viewWithTag(i) as? UILabel {
+                if weekDay == 7 {
+                    weekDay = 0
+                }
+                labelView.text = days[weekDay]
+                weekDay -= 1
+                if weekDay < 0 {
+                    weekDay = days.count - 1
+                }
+            }
+        }
+        
+    }
+    
+    func checkTotal() {
+        if counterView.counter >= 8 {
+            medalView.showMedal(show: true)
+        } else {
+            medalView.showMedal(show: false)
+        }
+    }
+    
+    
 }
 
 // @IBActions
@@ -90,6 +140,8 @@ extension ViewController {
             
             
         }
+        
+        checkTotal()
         
     }
     
