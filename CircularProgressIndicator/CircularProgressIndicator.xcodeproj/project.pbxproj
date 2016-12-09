@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1485E8CF1DFB58FB001208CC /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1485E8CE1DFB58FB001208CC /* CircularProgressView.swift */; };
 		148ECFD31DFB584A006DE49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148ECFD21DFB584A006DE49A /* AppDelegate.swift */; };
 		148ECFD51DFB584A006DE49A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148ECFD41DFB584A006DE49A /* ViewController.swift */; };
 		148ECFD81DFB584A006DE49A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148ECFD61DFB584A006DE49A /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1485E8CE1DFB58FB001208CC /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		148ECFCF1DFB584A006DE49A /* CircularProgressIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148ECFD21DFB584A006DE49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		148ECFD41DFB584A006DE49A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				148ECFD21DFB584A006DE49A /* AppDelegate.swift */,
 				148ECFD41DFB584A006DE49A /* ViewController.swift */,
+				1485E8CE1DFB58FB001208CC /* CircularProgressView.swift */,
 				148ECFD61DFB584A006DE49A /* Main.storyboard */,
 				148ECFD91DFB584A006DE49A /* Assets.xcassets */,
 				148ECFDB1DFB584A006DE49A /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				148ECFD51DFB584A006DE49A /* ViewController.swift in Sources */,
+				1485E8CF1DFB58FB001208CC /* CircularProgressView.swift in Sources */,
 				148ECFD31DFB584A006DE49A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				148ECFE31DFB584A006DE49A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
