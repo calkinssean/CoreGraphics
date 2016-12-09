@@ -26,8 +26,6 @@ let π: CGFloat = CGFloat(M_PI)
     
     override func draw(_ rect: CGRect) {
         
-        
-        
         let center = CGPoint(x: bounds.width/2, y: bounds.height/2)
         
         let radius: CGFloat = max(bounds.width, bounds.height)
@@ -95,7 +93,6 @@ let π: CGFloat = CGFloat(M_PI)
         }
         
         context?.restoreGState()
-        
         
         
     }
