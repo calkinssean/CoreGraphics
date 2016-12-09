@@ -185,7 +185,7 @@ extension SpeedometerView {
         
         let rotate = CGAffineTransform(rotationAngle: currentSpeedPosition)
         
-        UIView.animate(withDuration: 4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             
             self.needle.transform = rotate
             
