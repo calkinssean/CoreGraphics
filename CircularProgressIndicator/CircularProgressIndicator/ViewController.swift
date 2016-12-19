@@ -27,7 +27,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-       
+        
+        self.progressview.progress += 1
+
         
     }
     

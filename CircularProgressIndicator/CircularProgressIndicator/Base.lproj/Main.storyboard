@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ig4-zf-qv4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,64 +10,53 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="KFu-n1-ioB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularProgressIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ig4-zf-qv4" customClass="ViewController" customModule="CircularProgressIndicator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="gA3-rs-lqw"/>
+                        <viewControllerLayoutGuide type="bottom" id="lks-qE-CdD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="qZY-wk-z25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7t-5I-z1I" customClass="CircularProgressView" customModule="CircularProgressIndicator" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVl-8n-iqh" customClass="CircularProgressView" customModule="CircularProgressIndicator" customModuleProvider="target">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="ETy-5P-BgA"/>
-                                    <constraint firstAttribute="height" constant="100" id="e4d-Zb-Atz"/>
+                                    <constraint firstAttribute="width" constant="100" id="483-EK-g4d"/>
+                                    <constraint firstAttribute="height" constant="100" id="XNR-TV-p45"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="unfinishedProgressColor">
-                                        <color key="value" red="0.93333333330000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="finishedProgressColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <integer key="value" value="23"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <integer key="value" value="75"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dx-xc-MBe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adC-YZ-UU5">
                                 <rect key="frame" x="164" y="391.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6o2-Xu-VPe"/>
+                                    <action selector="buttonTapped:" destination="ig4-zf-qv4" eventType="touchUpInside" id="Xcw-NG-aBY"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L7t-5I-z1I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="36c-vR-zzc"/>
-                            <constraint firstItem="1Dx-xc-MBe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4GY-BG-swd"/>
-                            <constraint firstItem="L7t-5I-z1I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HY0-vM-feY"/>
-                            <constraint firstItem="1Dx-xc-MBe" firstAttribute="top" secondItem="L7t-5I-z1I" secondAttribute="bottom" constant="8" id="Tfp-L6-C55"/>
+                            <constraint firstItem="BVl-8n-iqh" firstAttribute="centerY" secondItem="qZY-wk-z25" secondAttribute="centerY" id="35I-HU-m4y"/>
+                            <constraint firstItem="BVl-8n-iqh" firstAttribute="centerX" secondItem="qZY-wk-z25" secondAttribute="centerX" id="MHg-Yo-5k6"/>
+                            <constraint firstItem="adC-YZ-UU5" firstAttribute="top" secondItem="BVl-8n-iqh" secondAttribute="bottom" constant="8" id="Xtz-V5-hi2"/>
+                            <constraint firstItem="adC-YZ-UU5" firstAttribute="centerX" secondItem="qZY-wk-z25" secondAttribute="centerX" id="ewB-0I-PSO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="progressview" destination="L7t-5I-z1I" id="6gn-zo-Ddu"/>
+                        <outlet property="progressview" destination="BVl-8n-iqh" id="n8V-45-avh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTo-Mg-kav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-322" y="-104"/>
         </scene>
     </scenes>
 </document>
