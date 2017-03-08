@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minusTapped(_ sender: UIButton) {
-        
+      
         if self.speedometerView.currentSpeed > 0 {
         
             self.speedometerView.currentSpeed -= 1

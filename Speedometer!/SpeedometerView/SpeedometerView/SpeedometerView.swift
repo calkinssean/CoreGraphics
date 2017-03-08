@@ -12,7 +12,6 @@ import UIKit
 
     @IBInspectable var outerRingBaseColor: UIColor = .red
     @IBInspectable var maxSpeed: Int = 100
-    
     @IBInspectable var currentSpeed = 50 {
         didSet {
             
@@ -208,6 +207,16 @@ extension SpeedometerView {
     func updateLabel() {
         
         self.speedLabel.text = "\(self.currentSpeed)"
+        
+    }
+    
+    func changeSpeed(to newSpeed: Int) {
+        
+        for i in newSpeed...currentSpeed {
+            
+            self.currentSpeed = i
+            
+        }
         
     }
     
