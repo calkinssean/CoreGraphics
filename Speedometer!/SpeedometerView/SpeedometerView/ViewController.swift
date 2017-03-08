@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var speedometerView: SpeedometerView!
-    @IBOutlet var speedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +29,7 @@ class ViewController: UIViewController {
             self.speedometerView.currentSpeed -= 1
             
         }
-        
-        self.changeSpeedLabel()
-        
+      
     }
 
     @IBAction func plusTapped(_ sender: UIButton) {
@@ -43,17 +40,8 @@ class ViewController: UIViewController {
             
         }
         
-        self.changeSpeedLabel()
-        
     }
-    
-    func changeSpeedLabel() {
-        
-        self.speedLabel.text = "\(self.speedometerView.currentSpeed)"
-        
-    }
-    
-    
+   
 
 }
 

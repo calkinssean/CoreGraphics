@@ -24,20 +24,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzg-oR-Qcj" customClass="SpeedometerView" customModule="SpeedometerView" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-as-Etq">
-                                        <rect key="frame" x="97" y="195" width="56" height="55"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="46"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="7ee-PP-Bac"/>
-                                    <constraint firstAttribute="bottom" secondItem="bPU-as-Etq" secondAttribute="bottom" id="Bca-sd-e6E"/>
                                     <constraint firstAttribute="width" constant="250" id="ab4-vV-bNz"/>
-                                    <constraint firstItem="bPU-as-Etq" firstAttribute="centerX" secondItem="gzg-oR-Qcj" secondAttribute="centerX" id="l63-hU-zR0"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxSpeed">
@@ -87,7 +77,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="speedLabel" destination="bPU-as-Etq" id="Whc-bi-AkB"/>
                         <outlet property="speedometerView" destination="gzg-oR-Qcj" id="dqk-aD-qnq"/>
                     </connections>
                 </viewController>

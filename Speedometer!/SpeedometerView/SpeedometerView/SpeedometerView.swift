@@ -43,7 +43,7 @@ import UIKit
         let startAngle: CGFloat = 3 * π / 4
         let endAngle: CGFloat = π / 4
         
-        let speedFontSize = (100)
+        let speedFontSize = (rect.width / 5)
         let speedFont = UIFont(name: "Arial", size: CGFloat(speedFontSize))
         
         let center = CGPoint(x: width/2, y: height/2)
@@ -52,10 +52,8 @@ import UIKit
         
         self.speedLabel = UILabel(frame: CGRect(x: width / 2  - labelWidth / 2, y: height - labelHeight - 8, width: labelWidth, height: labelHeight))
         self.speedLabel.textAlignment = .center
-        self.speedLabel.text = "test label"
-        self.speedLabel.backgroundColor = .green
+        self.speedLabel.text = "\(self.currentSpeed)"
         self.speedLabel.font = speedFont!
-        self.speedLabel.adjustsFontSizeToFitWidth = true
         
         self.addSubview(speedLabel)
         
