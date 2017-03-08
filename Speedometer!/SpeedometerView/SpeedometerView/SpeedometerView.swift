@@ -12,18 +12,20 @@ import UIKit
 
     @IBInspectable var outerRingBaseColor: UIColor = .red
     @IBInspectable var maxSpeed: Int = 100
-    
     @IBInspectable var currentSpeed = 50 {
         didSet {
             
             self.rotateNeedleToCurrentSpeed()
+            self.updateLabel()
             
         }
         
     }
     
+    var newSpeed = 0
+    var speedLabel = UILabel()
+    var timer = Timer()
     
-  
     var needle = UIView()
     let π = CGFloat(M_PI)
     
@@ -32,6 +34,9 @@ import UIKit
         let width = rect.width
         let height = rect.height
         
+        let labelWidth = width / 2.5
+        let labelHeight = height / 3
+        
         let arcWidth: CGFloat = 5
 
         let radius: CGFloat = max(bounds.width, bounds.height)
@@ -39,19 +44,25 @@ import UIKit
         let startAngle: CGFloat = 3 * π / 4
         let endAngle: CGFloat = π / 4
         
+        let speedFontSize = (width / 5)
+        let speedFont = UIFont(name: "Arial", size: CGFloat(speedFontSize))
+        
         let center = CGPoint(x: width/2, y: height/2)
         
         let outerRingPath = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        
+        self.speedLabel = UILabel(frame: CGRect(x: width / 2  - labelWidth / 2, y: height - labelHeight - 8, width: labelWidth, height: labelHeight))
+        self.speedLabel.textAlignment = .center
+        self.speedLabel.text = "\(self.currentSpeed)"
+        self.speedLabel.font = speedFont!
+        
+        self.addSubview(speedLabel)
         
         outerRingPath.lineWidth = arcWidth
         outerRingBaseColor.setStroke()
         outerRingPath.stroke()
 
-       
-        
         // big ticks
-        
-        
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
         
         let arcLengthPerTick = angleDifference / CGFloat(maxSpeed)
@@ -192,6 +203,39 @@ extension SpeedometerView {
             self.needle.transform = rotate
             
         }, completion: nil)
+        
+    }
+    
+    func updateLabel() {
+        
+        self.speedLabel.text = "\(self.currentSpeed)"
+        
+    }
+    
+  
+    func changeSpeed(to newSpeed: Int) {
+       
+        timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: {
+            _ in
+            
+            if newSpeed == self.currentSpeed {
+                self.timer.invalidate()
+            }
+            
+            if newSpeed > self.currentSpeed {
+                
+                self.currentSpeed += 1
+                
+            }
+            
+            if newSpeed < self.currentSpeed {
+                
+                self.currentSpeed -= 1
+                
+            }
+            
+        })
+    
         
     }
     
