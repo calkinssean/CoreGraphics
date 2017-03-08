@@ -21,10 +21,11 @@ import UIKit
         }
         
     }
-    
-    var newSpeed = 0
+   
     var speedLabel = UILabel()
     var timer = Timer()
+    
+    var animating = false
     
     var needle = UIView()
     let π = CGFloat(M_PI)
@@ -212,30 +213,36 @@ extension SpeedometerView {
         
     }
     
-  
-    func changeSpeed(to newSpeed: Int) {
-       
-        timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: {
-            _ in
-            
-            if newSpeed == self.currentSpeed {
-                self.timer.invalidate()
-            }
-            
-            if newSpeed > self.currentSpeed {
-                
-                self.currentSpeed += 1
-                
-            }
-            
-            if newSpeed < self.currentSpeed {
-                
-                self.currentSpeed -= 1
-                
-            }
-            
-        })
     
+    func changeSpeed(to newSpeed: Int) {
+        
+        if !self.animating {
+            
+            self.animating = true
+            
+            timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: {
+                _ in
+                
+                if newSpeed == self.currentSpeed {
+                    self.timer.invalidate()
+                    self.animating = false
+                }
+                
+                if newSpeed > self.currentSpeed {
+                    
+                    self.currentSpeed += 1
+                    
+                }
+                
+                if newSpeed < self.currentSpeed {
+                    
+                    self.currentSpeed -= 1
+                    
+                }
+                
+            })
+            
+        }
         
     }
     
