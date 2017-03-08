@@ -21,6 +21,8 @@ import UIKit
         }
         
     }
+    
+    
   
     var needle = UIView()
     let π = CGFloat(M_PI)

@@ -10,7 +10,6 @@
 		142674D91DF9FA0300A23F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142674D81DF9FA0300A23F2B /* AppDelegate.swift */; };
 		142674DB1DF9FA0300A23F2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142674DA1DF9FA0300A23F2B /* ViewController.swift */; };
 		142674DE1DF9FA0300A23F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142674DC1DF9FA0300A23F2B /* Main.storyboard */; };
-		142674E11DF9FA0300A23F2B /* SpeedometerView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 142674DF1DF9FA0300A23F2B /* SpeedometerView.xcdatamodeld */; };
 		142674E31DF9FA0300A23F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142674E21DF9FA0300A23F2B /* Assets.xcassets */; };
 		142674E61DF9FA0300A23F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142674E41DF9FA0300A23F2B /* LaunchScreen.storyboard */; };
 		142674EE1DF9FA2900A23F2B /* SpeedometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142674ED1DF9FA2900A23F2B /* SpeedometerView.swift */; };
@@ -21,7 +20,6 @@
 		142674D81DF9FA0300A23F2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		142674DA1DF9FA0300A23F2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		142674DD1DF9FA0300A23F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		142674E01DF9FA0300A23F2B /* SpeedometerView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeedometerView.xcdatamodel; sourceTree = "<group>"; };
 		142674E21DF9FA0300A23F2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		142674E51DF9FA0300A23F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		142674E71DF9FA0300A23F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				142674E21DF9FA0300A23F2B /* Assets.xcassets */,
 				142674E41DF9FA0300A23F2B /* LaunchScreen.storyboard */,
 				142674E71DF9FA0300A23F2B /* Info.plist */,
-				142674DF1DF9FA0300A23F2B /* SpeedometerView.xcdatamodeld */,
 			);
 			path = SpeedometerView;
 			sourceTree = "<group>";
@@ -146,7 +143,6 @@
 				142674EE1DF9FA2900A23F2B /* SpeedometerView.swift in Sources */,
 				142674DB1DF9FA0300A23F2B /* ViewController.swift in Sources */,
 				142674D91DF9FA0300A23F2B /* AppDelegate.swift in Sources */,
-				142674E11DF9FA0300A23F2B /* SpeedometerView.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,21 +304,9 @@
 				142674EC1DF9FA0300A23F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		142674DF1DF9FA0300A23F2B /* SpeedometerView.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				142674E01DF9FA0300A23F2B /* SpeedometerView.xcdatamodel */,
-			);
-			currentVersion = 142674E01DF9FA0300A23F2B /* SpeedometerView.xcdatamodel */;
-			path = SpeedometerView.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 142674CD1DF9FA0300A23F2B /* Project object */;
 }
