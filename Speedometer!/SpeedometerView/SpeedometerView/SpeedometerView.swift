@@ -22,7 +22,9 @@ import UIKit
         
     }
     
+    var newSpeed = 0
     var speedLabel = UILabel()
+    var timer = Timer()
     
     var needle = UIView()
     let π = CGFloat(M_PI)
@@ -32,7 +34,7 @@ import UIKit
         let width = rect.width
         let height = rect.height
         
-        let labelWidth = width / 3
+        let labelWidth = width / 2.5
         let labelHeight = height / 3
         
         let arcWidth: CGFloat = 5
@@ -42,7 +44,7 @@ import UIKit
         let startAngle: CGFloat = 3 * π / 4
         let endAngle: CGFloat = π / 4
         
-        let speedFontSize = (rect.width / 5)
+        let speedFontSize = (width / 5)
         let speedFont = UIFont(name: "Arial", size: CGFloat(speedFontSize))
         
         let center = CGPoint(x: width/2, y: height/2)
@@ -210,13 +212,30 @@ extension SpeedometerView {
         
     }
     
+  
     func changeSpeed(to newSpeed: Int) {
-        
-        for i in newSpeed...currentSpeed {
+       
+        timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: {
+            _ in
             
-            self.currentSpeed = i
+            if newSpeed == self.currentSpeed {
+                self.timer.invalidate()
+            }
             
-        }
+            if newSpeed > self.currentSpeed {
+                
+                self.currentSpeed += 1
+                
+            }
+            
+            if newSpeed < self.currentSpeed {
+                
+                self.currentSpeed -= 1
+                
+            }
+            
+        })
+    
         
     }
     

@@ -23,22 +23,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minusTapped(_ sender: UIButton) {
-      
-        if self.speedometerView.currentSpeed > 0 {
         
-            self.speedometerView.currentSpeed -= 1
-            
-        }
+        self.speedometerView.changeSpeed(to: 0)
+
       
     }
 
     @IBAction func plusTapped(_ sender: UIButton) {
         
-        if self.speedometerView.currentSpeed < self.speedometerView.maxSpeed {
-        
-        self.speedometerView.currentSpeed += 1
-            
-        }
+        self.speedometerView.changeSpeed(to: 100)
         
     }
    
