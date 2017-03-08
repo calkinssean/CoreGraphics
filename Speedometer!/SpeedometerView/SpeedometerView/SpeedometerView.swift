@@ -32,6 +32,9 @@ import UIKit
     
     override func draw(_ rect: CGRect) {
         
+        self.needle.removeFromSuperview()
+        self.speedLabel.removeFromSuperview()
+        
         let width = rect.width
         let height = rect.height
         
