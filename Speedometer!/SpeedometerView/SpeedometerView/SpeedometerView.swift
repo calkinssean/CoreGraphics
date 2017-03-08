@@ -47,11 +47,10 @@ import UIKit
         
         let outerRingPath = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
-        self.speedLabel = UILabel(frame: CGRect(x: width / 2  - labelWidth / 2, y: height - labelHeight / 2, width: labelWidth, height: labelHeight))
-        
+        self.speedLabel = UILabel(frame: CGRect(x: width / 2  - labelWidth / 2, y: height - labelHeight - 8, width: labelWidth, height: labelHeight))
         self.speedLabel.textAlignment = .center
-        
         self.speedLabel.text = "test label"
+        self.speedLabel.backgroundColor = .green
         
         self.addSubview(speedLabel)
         
@@ -59,8 +58,6 @@ import UIKit
         outerRingBaseColor.setStroke()
         outerRingPath.stroke()
 
-       
-        
         // big ticks
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
         
@@ -206,6 +203,8 @@ extension SpeedometerView {
     }
     
     func updateLabel() {
+        
+        self.speedLabel.text = "\(self.currentSpeed)"
         
     }
     
