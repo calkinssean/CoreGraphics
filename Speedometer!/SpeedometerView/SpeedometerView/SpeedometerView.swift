@@ -33,6 +33,9 @@ import UIKit
         let width = rect.width
         let height = rect.height
         
+        let labelWidth = width / 2
+        let labelHeight = height / 10
+        
         let arcWidth: CGFloat = 5
 
         let radius: CGFloat = max(bounds.width, bounds.height)
@@ -44,27 +47,13 @@ import UIKit
         
         let outerRingPath = UIBezierPath(arcCenter: center, radius: radius/2 - arcWidth, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
-
+        self.speedLabel = UILabel(frame: CGRect(x: width / 2  - labelWidth / 2, y: height - labelHeight / 2, width: labelWidth, height: labelHeight))
         
-        self.speedLabel = UILabel(frame: CGRect(x: rect.width / 2 - speedLabel.frame.width / 2, y: rect.height - speedLabel.frame.height - 8, width: rect.width / 4, height: rect.width / 8))
+        self.speedLabel.textAlignment = .center
         
-        speedLabel.text = "pppooooo"
-        
-        let horizontalConstraint = NSLayoutConstraint(item: speedLabel, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-        
-        let bottomConstraint = NSLayoutConstraint(item: speedLabel, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 8)
-        
-        NSLayoutConstraint.activate([horizontalConstraint, bottomConstraint])
-        
-        print(self.frame.width)
-        print(self.frame.width / 2 - speedLabel.frame.width / 2)
-        print(self.speedLabel.frame.width / 2)
-        
-        speedLabel.textAlignment = .center
+        self.speedLabel.text = "test label"
         
         self.addSubview(speedLabel)
-        
-        
         
         outerRingPath.lineWidth = arcWidth
         outerRingBaseColor.setStroke()
@@ -73,8 +62,6 @@ import UIKit
        
         
         // big ticks
-        
-        
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
         
         let arcLengthPerTick = angleDifference / CGFloat(maxSpeed)
