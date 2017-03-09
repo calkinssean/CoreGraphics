@@ -12,7 +12,6 @@
 		14C290201DF88BE300D0FCAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */; };
 		14C290221DF88BE300D0FCAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290211DF88BE300D0FCAA /* ViewController.swift */; };
 		14C290251DF88BE300D0FCAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C290231DF88BE300D0FCAA /* Main.storyboard */; };
-		14C290281DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14C290261DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld */; };
 		14C2902A1DF88BE400D0FCAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C290291DF88BE400D0FCAA /* Assets.xcassets */; };
 		14C2902D1DF88BE400D0FCAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C2902B1DF88BE400D0FCAA /* LaunchScreen.storyboard */; };
 		14C290351DF8A65D00D0FCAA /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C290341DF8A65D00D0FCAA /* PushButtonView.swift */; };
@@ -27,7 +26,6 @@
 		14C2901F1DF88BE300D0FCAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C290211DF88BE300D0FCAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		14C290241DF88BE300D0FCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14C290271DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleGaugeApp.xcdatamodel; sourceTree = "<group>"; };
 		14C290291DF88BE400D0FCAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C2902C1DF88BE400D0FCAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14C2902E1DF88BE400D0FCAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				14C290291DF88BE400D0FCAA /* Assets.xcassets */,
 				14C2902B1DF88BE400D0FCAA /* LaunchScreen.storyboard */,
 				14C2902E1DF88BE400D0FCAA /* Info.plist */,
-				14C290261DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld */,
 			);
 			path = SimpleGaugeApp;
 			sourceTree = "<group>";
@@ -160,7 +157,6 @@
 				14C290201DF88BE300D0FCAA /* AppDelegate.swift in Sources */,
 				14C290351DF8A65D00D0FCAA /* PushButtonView.swift in Sources */,
 				142674C91DF9E38F00A23F2B /* BackgroundView.swift in Sources */,
-				14C290281DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld in Sources */,
 				14C290371DF8AE1D00D0FCAA /* CounterView.swift in Sources */,
 				14C290391DF8B95000D0FCAA /* GraphView.swift in Sources */,
 			);
@@ -327,19 +323,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		14C290261DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				14C290271DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodel */,
-			);
-			currentVersion = 14C290271DF88BE400D0FCAA /* SimpleGaugeApp.xcdatamodel */;
-			path = SimpleGaugeApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 14C290141DF88BE300D0FCAA /* Project object */;
 }
