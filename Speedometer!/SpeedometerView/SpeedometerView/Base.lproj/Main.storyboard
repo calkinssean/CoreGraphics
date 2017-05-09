@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzg-oR-Qcj" customClass="SpeedometerView" customModule="SpeedometerView" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="7ee-PP-Bac"/>
-                                    <constraint firstAttribute="width" constant="250" id="ab4-vV-bNz"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxSpeed">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNA-pf-fX2">
-                                <rect key="frame" x="199" y="502.5" width="60" height="44"/>
+                                <rect key="frame" x="234" y="537" width="60" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="UdB-ar-K0P"/>
@@ -51,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2g3-GE-JId">
-                                <rect key="frame" x="116" y="502.5" width="60" height="44"/>
+                                <rect key="frame" x="120" y="537" width="60" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="MHH-5h-KBy"/>
@@ -65,19 +52,40 @@
                                     <action selector="minusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yG9-BF-IXC"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7WH-3x-G6h">
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-LY-frw" customClass="SpeedometerView" customModule="SpeedometerView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="nAS-2U-mm2"/>
+                                            <constraint firstAttribute="width" constant="250" id="vPj-oz-RaN"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="speedoColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxSpeed">
+                                                <integer key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gzg-oR-Qcj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AhW-jK-hhB"/>
-                            <constraint firstItem="gNA-pf-fX2" firstAttribute="top" secondItem="gzg-oR-Qcj" secondAttribute="bottom" constant="44" id="DJK-4h-0wa"/>
-                            <constraint firstItem="gzg-oR-Qcj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sxy-6q-MZN"/>
+                            <constraint firstItem="7WH-3x-G6h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3ZZ-wB-uVJ"/>
+                            <constraint firstItem="7WH-3x-G6h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6p2-IE-qXq"/>
                             <constraint firstItem="2g3-GE-JId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="a0V-Uh-Ycp"/>
+                            <constraint firstItem="2g3-GE-JId" firstAttribute="top" secondItem="7WH-3x-G6h" secondAttribute="bottom" constant="44" id="b50-vY-5aO"/>
+                            <constraint firstItem="gNA-pf-fX2" firstAttribute="top" secondItem="7WH-3x-G6h" secondAttribute="bottom" constant="44" id="e5U-aS-Ggc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gNA-pf-fX2" secondAttribute="trailing" constant="100" id="i2f-n8-95M"/>
-                            <constraint firstItem="2g3-GE-JId" firstAttribute="top" secondItem="gzg-oR-Qcj" secondAttribute="bottom" constant="44" id="u0i-Co-kTJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="speedometerView" destination="gzg-oR-Qcj" id="dqk-aD-qnq"/>
+                        <outlet property="speedometerView" destination="VA6-LY-frw" id="dTO-h2-i2u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

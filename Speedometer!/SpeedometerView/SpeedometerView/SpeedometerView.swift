@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class SpeedometerView: UIView {
 
-    @IBInspectable var outerRingBaseColor: UIColor = .red
+    @IBInspectable var speedoColor: UIColor = .black
     @IBInspectable var maxSpeed: Int = 100
     @IBInspectable var currentSpeed = 50 {
         didSet {
@@ -26,13 +26,71 @@ import UIKit
     var timer = Timer()
     
     var animating = false
+   
+    let π = CGFloat(Double.pi)
     
-    var needle = UIView()
-    let π = CGFloat(M_PI)
+    let needleLayer = CAShapeLayer()
+    let circleLayer = CAShapeLayer()
+    
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        layer.addSublayer(needleLayer)
+        layer.addSublayer(circleLayer)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+       
+        let path = createNeedlePath()
+        
+        needleLayer.path = path.cgPath
+        needleLayer.fillColor = UIColor.red.cgColor
+       
+        needleLayer.bounds = bounds
+        needleLayer.position = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
+        
+        let circlePath = createInnerCirclePath()
+        circleLayer.path = circlePath.cgPath
+        circleLayer.fillColor = speedoColor.cgColor
+        
+      //  rotateNeedleToZeroPosition()
+        
+    }
+    
+    func createInnerCirclePath() -> UIBezierPath {
+        
+        let circleSize = max(self.bounds.width, self.bounds.height) / 15
+        let width = self.bounds.width
+        let height = self.bounds.height
+        
+        let circlePath = UIBezierPath(ovalIn: CGRect(x: width / 2 - circleSize / 2, y: height / 2 - circleSize / 2, width: circleSize, height: circleSize))
+        
+        return circlePath
+        
+    }
+    
+    func createNeedlePath() -> UIBezierPath {
+        
+        let needleWidth = frame.width * 0.024
+        let needleHeight = frame.height * 0.3
+        
+        let centerX = bounds.width / 2
+        let centerY = bounds.height / 2
+        
+        let needlePath = UIBezierPath()
+        
+        needlePath.move(to: CGPoint(x: centerX, y: centerY - needleHeight))
+        needlePath.addLine(to: CGPoint(x: centerX - needleWidth / 2 , y: centerY))
+        needlePath.addLine(to: CGPoint(x: centerX + needleWidth / 2, y: centerY))
+        needlePath.addLine(to: CGPoint(x: centerX, y: centerY - needleHeight))
+
+        return needlePath
+    }
+
     
     override func draw(_ rect: CGRect) {
         
-        self.needle.removeFromSuperview()
+     //   self.needle.removeFromSuperview()
         self.speedLabel.removeFromSuperview()
         
         let width = rect.width
@@ -63,7 +121,7 @@ import UIKit
         self.addSubview(speedLabel)
         
         outerRingPath.lineWidth = arcWidth
-        outerRingBaseColor.setStroke()
+        speedoColor.setStroke()
         outerRingPath.stroke()
 
         // big ticks
@@ -144,59 +202,31 @@ import UIKit
         
         context?.restoreGState()
         
-        self.createNeedle()
-        self.rotateNeedleToZeroPosition()
-        self.rotateNeedleToCurrentSpeed()
-        
     }
     
 }
 
 extension SpeedometerView {
     
-    func createNeedle() {
-        
-        let radius: CGFloat = max(bounds.width, bounds.height)
-        
-        let width = self.bounds.width
-        let height = self.bounds.height
-        
-        let needleWidth: CGFloat = 3
-        let needleLength: CGFloat = radius * 0.3
-        
-        let needle = UIView(frame: CGRect(x: width/2 - needleWidth/2, y: height/2, width: needleWidth, height: needleLength))
-        self.needle = needle
-        needle.backgroundColor = .red
-        self.addSubview(needle)
-        
-        let centerCircle = UIView(frame: CGRect(x: width/2 - radius/25, y: height/2 - radius/25, width: radius/12.5, height: radius/12.5))
-        centerCircle.backgroundColor = .black
-        centerCircle.layer.cornerRadius = radius/25
-        self.addSubview(centerCircle)
-        
-    }
-    
     func rotateNeedleToZeroPosition() {
-     
-        self.needle.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
         
-        self.needle.frame = CGRect(x: self.needle.frame.minX, y: self.frame.height/2, width: self.needle.frame.width, height: self.needle.frame.height)
+        let zeroPosition = 5 * π / 4
         
-        let zeroPosition = π / 4
-        
-        let rotate = CGAffineTransform(rotationAngle: zeroPosition)
+        let transform = CGAffineTransform(rotationAngle: zeroPosition)
        
-        self.needle.transform = rotate
+        UIView.animate(withDuration: 0.1, animations: {
+            self.needleLayer.setAffineTransform(transform)
+        })
         
     }
     
     func rotateNeedleToCurrentSpeed() {
         
-        let zeroPosition = π / 4
+        let zeroPosition = 5 * π / 4
         
-        let maxSpeedPosition = 7 * π / 4
+        let allowedRotationRadians = 3 * π / 2
         
-        let anglePerMPH = (maxSpeedPosition - zeroPosition) / 100
+        let anglePerMPH = allowedRotationRadians / CGFloat(maxSpeed)
         
         let currentSpeedPosition = zeroPosition + CGFloat(currentSpeed) * anglePerMPH
         
@@ -204,7 +234,7 @@ extension SpeedometerView {
         
         UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             
-            self.needle.transform = rotate
+            self.needleLayer.setAffineTransform(rotate)
             
         }, completion: nil)
         
@@ -249,6 +279,9 @@ extension SpeedometerView {
         
     }
     
+    func degreesToRadians(degrees: Double) -> Double { return degrees * .pi / 180 }
+    func radiansToDegrees (radians: Double) -> Double { return radians * 180 / .pi }
+   
 }
 
 
