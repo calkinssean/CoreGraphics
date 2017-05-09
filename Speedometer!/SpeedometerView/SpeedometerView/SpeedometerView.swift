@@ -278,10 +278,7 @@ extension SpeedometerView {
         }
         
     }
-    
-    func degreesToRadians(degrees: Double) -> Double { return degrees * .pi / 180 }
-    func radiansToDegrees (radians: Double) -> Double { return radians * 180 / .pi }
-   
+  
 }
 
 
